@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harvey Labringca | Graphic Designer Portfolio</title>
+<meta name="description" content="Portfolio of Harvey Labringca: branding, print design, advertising, digital design, packaging and prepress artwork.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bricolage+Grotesque:opsz,wght@12..96,800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#111;--panel:#161616;--text:#e6e6e6;--muted:#9b9b9b;--cream:#fff1b8;--accent:#ffb81c;
+--head:"Bungee","Impact",sans-serif;--tile:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;--body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:400 1rem/1.6 var(--body);display:flex;min-height:100vh}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* sidebar */
+aside{width:17rem;flex:none;background:var(--panel);border-right:1px solid #262626;padding:2rem 1rem 3rem;text-align:center;position:sticky;top:0;height:100vh;overflow-y:auto}
+.brand{display:block;font:800 1.35rem/1.1 var(--tile);letter-spacing:-.01em;color:#fff}
+.brand small{display:block;margin-top:.35rem;font:400 .85rem var(--body);color:var(--muted)}
+aside h2{font:400 1.05rem/1.2 var(--head);color:var(--cream);margin:2rem 0 .5rem}
+aside h2 a:hover,aside h2 a.on{color:var(--accent)}
+aside ul{list-style:none}
+aside li a{display:block;padding:.1rem 0;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+aside li a:hover,aside li a.on{color:#fff}
+.menu{display:none}
+
+/* main */
+main{flex:1;min-width:0;padding:0 0 3rem}
+.top{padding:2.5rem 2rem 1.5rem}
+.top h1{font:800 clamp(2rem,5vw,3.4rem)/1.05 var(--tile);letter-spacing:-.02em;color:#fff}
+.top p{margin-top:.6rem;color:var(--muted);max-width:36rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr));gap:0}
+.tile{position:relative;aspect-ratio:1;display:flex;align-items:center;justify-content:center;overflow:hidden;color:#fff;text-align:center;padding:1rem}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tile span{position:relative;font:800 clamp(1.8rem,3.2vw,2.8rem)/.95 var(--tile);letter-spacing:-.02em;text-shadow:0 2px 14px rgba(0,0,0,.35)}
+.tile:hover::after,.tile:focus-visible::after{content:"";position:absolute;inset:0;background:rgba(255,255,255,.12)}
+.g0{background:radial-gradient(circle at 20% 80%,#2a2cff,#111 60%)}
+.g1{background:radial-gradient(circle at 70% 30%,#8a8a8a,#1c1c1c 65%)}
+.g2{background:linear-gradient(160deg,#ffd21f,#f0561a)}
+.g3{background:radial-gradient(circle at 50% 50%,#7a6a5c,#151515 70%)}
+.g4{background:linear-gradient(140deg,#00a3d9,#1b2a6b)}
+.g5{background:linear-gradient(160deg,#e5007d,#4a1042)}
+.proj{aspect-ratio:4/3;background:#1d1d1d;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.9rem}
+.proj img{width:100%;height:100%;object-fit:contain;background:#181818}
+.crumb{padding:1.5rem 2rem 0;font-size:.85rem;color:var(--muted)}
+.crumb a:hover{color:#fff}
+.contact{padding:0 2rem 2rem}
+.contact p{max-width:34rem;color:var(--muted)}
+.contact a{display:inline-block;margin-top:1rem;font:800 clamp(1.4rem,4vw,2.4rem)/1.2 var(--tile);color:#fff;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:4px;text-underline-offset:6px}
+.facts{padding:0 2rem 2rem;color:var(--muted);max-width:40rem}
+.up{display:block;text-align:center;margin-top:2.5rem;color:var(--muted);font-size:.9rem}
+.up:hover{color:#fff}
+
+@media (max-width:52rem){
+  body{display:block}
+  aside{position:static;width:100%;height:auto;padding:1rem;border-right:0;border-bottom:1px solid #262626}
+  .menu{display:inline-block;margin-top:.8rem;background:none;border:1px solid #444;color:var(--text);padding:.4rem 1rem;font:inherit;border-radius:2rem;cursor:pointer}
+  aside nav{display:none}
+  aside.open nav{display:block}
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<aside id="side">
+  <a class="brand" href="#/">Harvey Labringca<small>Graphic designer and artworker</small></a>
+  <button class="menu" id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Portfolio"></nav>
+</aside>
+<main id="main" tabindex="-1"></main>
+
+<script>
+/* ===== I-EDIT DITO ===== */
+const EMAIL = "your-email@example.com";   // palitan ng totoong email
+
+// Mga category at pages. Pwede kang magdagdag/magbawas/mag-rename.
+const NAV = [
+  {t:"Branding", i:["Brand Identity","Logo Design","Typography","Color Palette"]},
+  {t:"Print Design", i:["Magazines","Catalogs","Posters","Business Cards","Brochures","Flyers"]},
+  {t:"Advertising & Marketing", i:["Marketing Collaterals","Digital Ads","Social Media Ads"]},
+  {t:"Digital Design", i:["UI/Visual Assets","Email Graphics","Web Banners"]},
+  {t:"Promotional Product", i:["Packaging","Product Mockups"]},
+  {t:"Artwork / Prepress", i:["Production Proofs","CMYK / PMS","Color Separation","Cut Files","Print-Ready Files"]},
+  {t:"Work", i:["Portfolio","Bunside","Walmart","Deseño","Contact"]}
+];
+
+// Cover image ng bawat tile (optional). Key = slug ng page (lowercase, may gitling).
+// Halimbawa: "brand-identity": "images/covers/brand-identity.jpg"
+const COVERS = {
+};
+
+// Mga image ng project sa loob ng bawat page.
+// Halimbawa: "logo-design": ["images/logo/1.jpg","images/logo/2.jpg"]
+const IMAGES = {
+};
+/* ======================== */
+
+const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+const $ = id => document.getElementById(id);
+const main = $("main"), side = $("side");
+
+$("nav").innerHTML = NAV.map(g =>
+  `<h2><a href="#/${slug(g.t)}" data-r="${slug(g.t)}">${g.t}</a></h2><ul>` +
+  g.i.map(p => `<li><a href="#/${slug(g.t)}/${slug(p)}" data-r="${slug(g.t)}/${slug(p)}">${p}</a></li>`).join("") + `</ul>`
+).join("");
+
+$("menu").onclick = () => {
+  const o = side.classList.toggle("open");
+  $("menu").setAttribute("aria-expanded", o);
+};
+
+function tile(href, label, key, n){
+  const cover = COVERS[key];
+  return `<a class="tile g${n % 6}" href="${href}">${cover ? `<img src="${cover}" alt="">` : ""}<span>${label}</span></a>`;
+}
+
+function render(){
+  const r = (location.hash.replace(/^#\/?/, "")).split("/");
+  const g = NAV.find(x => slug(x.t) === r[0]);
+  const p = g && r[1] ? g.i.find(x => slug(x) === r[1]) : null;
+  let html = "", title = "Harvey Labringca | Graphic Designer Portfolio";
+
+  if(!g){
+    html = `<div class="top"><h1>Harvey Labringca</h1><p>Graphic designer with 6 years of experience in design, artwork production and print-ready files.</p></div>
+      <div class="grid">${NAV.map((x,n) => tile(`#/${slug(x.t)}`, x.t, slug(x.t), n)).join("")}</div>`;
+  } else if(!p){
+    title = `${g.t} | Harvey Labringca`;
+    html = `<div class="top"><h1>${g.t}</h1></div>
+      <div class="grid">${g.i.map((x,n) => tile(`#/${slug(g.t)}/${slug(x)}`, x, slug(x), n)).join("")}</div>`;
+  } else if(slug(p) === "contact"){
+    title = "Contact | Harvey Labringca";
+    html = `<div class="top"><h1>Contact</h1></div>
+      <div class="contact"><p>I'm open to graphic design and artwork roles. Send me a message and I'll reply as soon as I can.</p>
+      <a href="mailto:${EMAIL}">${EMAIL}</a></div>
+      <p class="facts">Based in Angeles City, Philippines. Tools: Adobe Illustrator, Photoshop, InDesign, Lightroom and CorelDRAW.</p>`;
+  } else {
+    title = `${p} | Harvey Labringca`;
+    const imgs = IMAGES[slug(p)] || [];
+    const body = imgs.length
+      ? imgs.map(s => `<div class="proj"><img src="${s}" alt="${p} by Harvey Labringca" loading="lazy"></div>`).join("")
+      : `<div class="proj">Projects coming soon</div>`;
+    html = `<p class="crumb"><a href="#/${slug(g.t)}">${g.t}</a> / ${p}</p>
+      <div class="top"><h1>${p}</h1></div><div class="grid">${body}</div>`;
+  }
+
+  main.innerHTML = html + `<a class="up" href="#" onclick="window.scrollTo(0,0);return false">&uarr; Back to top</a>`;
+  document.title = title;
+  document.querySelectorAll("#nav a").forEach(a => a.classList.toggle("on", a.dataset.r === r.filter(Boolean).join("/")));
+  side.classList.remove("open"); $("menu").setAttribute("aria-expanded", "false");
+  window.scrollTo(0,0);
+}
+addEventListener("hashchange", render);
+render();
+</script>
+</body>
+</html>
